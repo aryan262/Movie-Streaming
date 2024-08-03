@@ -9,7 +9,7 @@ export default defineConfig({
 			"/api": {
 				target: "https://netflix-clone-three-lemon.vercel.app",
 				changeOrigin: true,
-				secure: false, // Allow self-signed certificates
+				secure: true,
 			},
 		},
 	},
