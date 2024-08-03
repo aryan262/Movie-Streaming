@@ -2,7 +2,6 @@ import axios from "axios";
 import toast from "react-hot-toast";
 import { create } from "zustand";
 
-const apiUrl = import.meta.env.VITE_URL
 
 
 export const useAuthStore = create((set) => ({
@@ -14,7 +13,7 @@ export const useAuthStore = create((set) => ({
 	signup: async (credentials) => {
 		set({ isSigningUp: true });
 		try {
-			const response = await axios.post(apiUrl+"/api/v1/auth/signup", credentials);
+			const response = await axios.post("/api/v1/auth/signup", credentials);
 			set({ user: response.data.user, isSigningUp: false });
 			toast.success("Account created successfully");
 		} catch (error) {
@@ -25,7 +24,7 @@ export const useAuthStore = create((set) => ({
 	login: async (credentials) => {
 		set({ isLoggingIn: true });
 		try {
-			const response = await axios.post(apiUrl+"/api/v1/auth/login", credentials);
+			const response = await axios.post("/api/v1/auth/login", credentials);
 			set({ user: response.data.user, isLoggingIn: false });
 		} catch (error) {
 			set({ isLoggingIn: false, user: null });
@@ -35,7 +34,7 @@ export const useAuthStore = create((set) => ({
 	logout: async () => {
 		set({ isLoggingOut: true });
 		try {
-			await axios.post(apiUrl+"/api/v1/auth/logout");
+			await axios.post("/api/v1/auth/logout");
 			set({ user: null, isLoggingOut: false });
 			toast.success("Logged out successfully");
 		} catch (error) {
@@ -46,7 +45,7 @@ export const useAuthStore = create((set) => ({
 	authCheck: async () => {
 		set({ isCheckingAuth: true });
 		try {
-			const response = await axios.get(apiUrl+"/api/v1/auth/authCheck");
+			const response = await axios.get("/api/v1/auth/authCheck");
 
 			set({ user: response.data.user, isCheckingAuth: false });
 		} catch (error) {

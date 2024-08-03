@@ -10,7 +10,6 @@ const MovieSlider = ({ category }) => {
 	const { contentType } = useContentStore();
 	const [content, setContent] = useState([]);
 	const [showArrows, setShowArrows] = useState(false);
-	const apiUrl = import.meta.env.VITE_URL
 	const sliderRef = useRef(null);
 
 	const formattedCategoryName =
@@ -19,7 +18,7 @@ const MovieSlider = ({ category }) => {
 
 	useEffect(() => {
 		const getContent = async () => {
-			const res = await axios.get(apiUrl+`/api/v1/${contentType}/${category}`);
+			const res = await axios.get(`/api/v1/${contentType}/${category}`);
 			setContent(res.data.content);
 		};
 

@@ -50,7 +50,6 @@ const AuthScreen = () => {
 							Watch on Smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.
 						</p>
 					</div>
-					{/* right side */}
 					<div className='flex-1 relative'>
 						<img src='/tv.png' alt='Tv image' className='mt-4 z-20 relative' />
 						<video
@@ -66,13 +65,10 @@ const AuthScreen = () => {
 				</div>
 			</div>
 
-			{/* separator */}
 			<div className='h-2 w-full bg-[#232323]' aria-hidden='true' />
 
-			{/* 2nd section */}
 			<div className='py-10 bg-black text-white'>
 				<div className='flex max-w-6xl mx-auto items-center justify-center md:flex-row flex-col-reverse px-4 md:px-2'>
-					{/* left side */}
 					<div className='flex-1 relative'>
 						<div className='relative'>
 							<img src='/stranger-things-lg.png' alt='Stranger Things img' className='mt-4' />
@@ -107,14 +103,11 @@ const AuthScreen = () => {
 				</div>
 			</div>
 
-			{/* separator */}
 
 			<div className='h-2 w-full bg-[#232323]' aria-hidden='true' />
 
-			{/* 3rd section */}
 			<div className='py-10 bg-black text-white'>
 				<div className='flex max-w-6xl mx-auto items-center justify-center md:flex-row flex-col px-4 md:px-2'>
-					{/* left side */}
 					<div className='flex-1 text-center md:text-left'>
 						<h2 className='text-4xl md:text-5xl font-extrabold mb-4'>Watch everywhere</h2>
 						<p className='text-lg md:text-xl'>
@@ -122,7 +115,6 @@ const AuthScreen = () => {
 						</p>
 					</div>
 
-					{/* right side */}
 					<div className='flex-1 relative overflow-hidden'>
 						<img src='/device-pile.png' alt='Device image' className='mt-4 z-20 relative' />
 						<video
@@ -148,6 +140,7 @@ const AuthScreen = () => {
            px-4 md:px-2
         '
 				>
+
 					<div className='flex-1 relative'>
 						<img src='/kids.png' alt='Enjoy on your TV' className='mt-4' />
 					</div>
