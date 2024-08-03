@@ -11,5 +11,5 @@ export const generateTokenAndSetCookie = (userId, res) => {
 		secure: ENV_VARS.NODE_ENV !== "development",
 	});
 
-	return token;
+	return token; 
 };
