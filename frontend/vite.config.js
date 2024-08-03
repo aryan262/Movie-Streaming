@@ -7,7 +7,9 @@ export default defineConfig({
   server: {
 		proxy: {
 			"/api": {
-				target: "http://localhost:5000",
+				target: "https://netflix-clone-three-lemon.vercel.app",
+				changeOrigin: true,
+				secure: false, // Allow self-signed certificates
 			},
 		},
 	},
