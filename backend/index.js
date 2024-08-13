@@ -44,4 +44,4 @@ if (ENV_VARS.NODE_ENV === "production") {
 
 connectDB();
 
-// export default app;
+export default app;
