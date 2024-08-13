@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import { SMALL_IMG_BASE_URL } from "../utils/constants";
 import { Trash } from "lucide-react";
 import toast from "react-hot-toast";
+const BASEURL = 'https://netflix-2-six.vercel.app'
 
 function formatDate(dateString) {
 	// Create a Date object from the input date string
@@ -26,7 +27,7 @@ const SearchHistoryPage = () => {
 	useEffect(() => {
 		const getSearchHistory = async () => {
 			try {
-				const res = await axios.get(`/api/v1/search/history`);
+				const res = await axios.get(BASEURL+`/api/v1/search/history`);
 				setSearchHistory(res.data.content);
 			} catch (error) {
 				setSearchHistory([]);
@@ -37,7 +38,7 @@ const SearchHistoryPage = () => {
 
 	const handleDelete = async (entry) => {
 		try {
-			await axios.delete(`/api/v1/search/history/${entry.id}`);
+			await axios.delete(BASEURL+`/api/v1/search/history/${entry.id}`);
 			setSearchHistory(searchHistory.filter((item) => item.id !== entry.id));
 		} catch (error) {
 			toast.error("Failed to delete search item");

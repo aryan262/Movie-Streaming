@@ -45,7 +45,10 @@ if (ENV_VARS.NODE_ENV === "production") {
 		res.sendFile(path.resolve(__dirname, "./frontend", "dist", "index.html"));
 	});
 }
-
+// app.listen(PORT, () => {
+//     console.log("Server started at http://localhost:" + PORT);
+//     connectDB();
+// });
 connectDB();
 
 export default app;
