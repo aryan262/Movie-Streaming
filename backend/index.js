@@ -30,10 +30,14 @@ app.use("/api/v1/search", protectRoute, searchRoutes);
 app.use("/api", (req, res)=>{
 	res.send("Welcome to the API")
 })
+app.use("/", (req, res)=>{
+	res.send("Welcome to the API")
+})
 app.use((err, req, res, next) => {
     console.error(err.stack);
     res.status(500).send('Something broke!');
 });
+
 if (ENV_VARS.NODE_ENV === "production") {
 	app.use(express.static(path.join(__dirname, "./frontend/dist")));
 
