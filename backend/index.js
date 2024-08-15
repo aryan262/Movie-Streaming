@@ -21,7 +21,7 @@ const PORT = ENV_VARS.PORT;
 
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors({origin: ["https://netflix-2-ckyx.vercel.app/"] , credentials:true}));
+app.use(cors({origin: "*" , credentials:true}));
 app.use(express.urlencoded({extended:true}))
 app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/movie", protectRoute, movieRoutes);
