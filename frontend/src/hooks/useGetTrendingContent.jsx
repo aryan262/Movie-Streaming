@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useContentStore } from "../store/content";
 import axios from "axios";
-const BASEURL = 'https://netflix-2-six.vercel.app'
+const BASEURL = 'https://movie-streaming-three.vercel.app'
 
 const useGetTrendingContent = () => {
 	const [trendingContent, setTrendingContent] = useState(null);

@@ -1,7 +1,7 @@
 import axios from "axios";
 import toast from "react-hot-toast";
 import { create } from "zustand";
-const BASEURL = 'https://netflix-2-six.vercel.app/'
+const BASEURL = 'https://movie-streaming-three.vercel.app/'
 export const useAuthStore = create((set) => ({
 	user: null,
 	isSigningUp: false,
