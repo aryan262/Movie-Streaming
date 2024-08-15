@@ -8,7 +8,7 @@ import ReactPlayer from "react-player";
 import { ORIGINAL_IMG_BASE_URL, SMALL_IMG_BASE_URL } from "../utils/constants";
 import { formatReleaseDate } from "../utils/dateFunction";
 import WatchPageSkeleton from "../components/skeletons/WatchPageSkeleton";
-const BASEURL = 'https://movie-streaming-three.vercel.app'
+const BASEURL = 'https://netflix-2-six.vercel.app'
 
 const WatchPage = () => {
 	const { id } = useParams();

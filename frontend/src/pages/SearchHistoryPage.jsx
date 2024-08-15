@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 import { SMALL_IMG_BASE_URL } from "../utils/constants";
 import { Trash } from "lucide-react";
 import toast from "react-hot-toast";
-const BASEURL = 'https://movie-streaming-three.vercel.app'
+const BASEURL = 'https://netflix-2-six.vercel.app'
 
 function formatDate(dateString) {
 	// Create a Date object from the input date string

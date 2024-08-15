@@ -6,7 +6,7 @@ import toast from "react-hot-toast";
 import axios from "axios";
 import { ORIGINAL_IMG_BASE_URL } from "../utils/constants";
 import { Link } from "react-router-dom";
-const BASEURL = 'https://movie-streaming-three.vercel.app'
+const BASEURL = 'https://netflix-2-six.vercel.app'
 
 const SearchPage = () => {
 	const [activeTab, setActiveTab] = useState("movie");
